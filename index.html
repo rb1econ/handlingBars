@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div id="product-container">
+      <h1>Here are Products</h1>
+      <script type="text/x-handlebars-template" id="handleYourBars">
+        <div class="product">
+        <h3>{{title}}</h3>
+          <ul>
+            <li>It costs ${{cost}} {{discount}}</li>
+            <li>{{image}}</li>
+            <li>{{sale}}</li>
+            <!--<li>{{details}}</li>-->
+            <li>
+              <ul>
+                {{#each details}}
+                  <li> {{@key}}: {{this}}</li>
+                {{/each}}
+              </ul>  
+            </li>
+          </ul>
+          {{product}}
+        </div>
+      </script>
+    </div>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
